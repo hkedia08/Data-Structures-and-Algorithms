@@ -1,6 +1,35 @@
 //https://leetcode.com/problems/convert-bst-to-greater-tree/
 //https://leetcode.com/problems/binary-search-tree-to-greater-sum-tree/
 
+// there is property in bst  and inorder always give us sorted elements
+// so we traverse in reverse direction so as to maximum element first
+class Solution
+{
+    void inorder(TreeNode *root, int &sum)
+    {
+        if (root == NULL)
+            return;
+        inorder(root->right, sum);
+        (root->val) += sum;
+        sum = root->val;
+        inorder(root->left, sum);
+    }
+
+public:
+    TreeNode *bstToGst(TreeNode *root)
+    {
+        if (root == NULL)
+        {
+            return NULL;
+        }
+        int sum = 0;
+        inorder(root, sum);
+        return root;
+    }
+};
+
+// this the solution which I had coded in first view
+
 class Solution
 {
     // inorder traversal to get all the elements of the tree
