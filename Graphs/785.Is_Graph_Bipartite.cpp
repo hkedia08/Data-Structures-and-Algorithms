@@ -1,5 +1,8 @@
 //https://leetcode.com/problems/is-graph-bipartite/
 
+// Bipartite is a graph in which we there is edge from u->v and u and v are both present in differnet set
+// it is also know as a node from adjacent nodes are of different color
+
 class Solution
 {
 public:
