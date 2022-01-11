@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/next-greater-element-ii/
 
-// everything is just same as next greater element in this ngt is not -1
+// everything is just same as next greater element in this  last element ngt is not -1
 
 class Solution
 {
